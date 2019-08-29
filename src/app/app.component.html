@@ -1,16 +1,11 @@
 <div class="container-fluid"> 
+    <app-nav></app-nav>
     <h1>User Managment System</h1>
-    <a href="#" (click)="newUser()">New User</a>
 
     <div class="row">
-        <div class="col-md-8">
-            <app-users (updateUser)="updateUser($event)"></app-users>
-        </div>
-    
-        <div class="col-md-4" *ngIf="showForm">
-            <app-user-detail [user]="userSelected"></app-user-detail>
+        <div class="col-12">
+            <router-outlet></router-outlet>
         </div>
     </div>
-
 
 </div>
