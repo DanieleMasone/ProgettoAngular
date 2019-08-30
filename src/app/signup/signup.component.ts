@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
       return false;
     }
 
-    if (this.auth.signUp(form.value.name, form.value.email, form.value.password)) {
+    if (this.auth.signUp(form.value.name, form.value.email)) {
       this.router.navigate(['']);
     }
   }
