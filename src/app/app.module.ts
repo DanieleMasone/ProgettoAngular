@@ -13,6 +13,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalBasicComponent } from './modal-basic/modal-basic.component';
 import { UserDataComponent } from './user-data/user-data.component';
 import { RoutingModuleModule } from './routing-module.module';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './services/auth.service';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { RoutingModuleModule } from './routing-module.module';
     UserDetailComponent,
     NavComponent,
     ModalBasicComponent,
-    UserDataComponent
+    UserDataComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,7 @@ import { RoutingModuleModule } from './routing-module.module';
     NgbModule,
     RoutingModuleModule
   ],
-  providers: [UserService],
+  providers: [UserService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

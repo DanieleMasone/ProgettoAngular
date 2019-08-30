@@ -23,5 +23,19 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a *ngIf="!isUserLoggedIn" (click)="signIn($event)" class="nav-link" href="#">Log In</a>
+            </li>
+            <li class="nav-item text-nowrap">
+                <a *ngIf="!isUserLoggedIn" (click)="signUp($event)" class="nav-link" href="#">Sign In</a>
+            </li>
+            <li class="nav-item text-nowrap">
+                {{username}}
+            </li>
+            <li class="nav-item text-nowrap">
+                <a *ngIf="isUserLoggedIn" class="nav-link" href="#" (click)="logOut($event)">Sign Out</a>
+            </li>
+        </ul>
     </div>
 </nav>
